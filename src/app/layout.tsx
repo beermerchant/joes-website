@@ -1,9 +1,10 @@
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geostar } from "next/font/google";
 
 import { ThemeProvider } from "~/app/themecontext";
+import { Sidebar, SidebarProvider } from "~/components/ui/sidebar";
 
 export const metadata: Metadata = {
   title: "Joe's wonderful web",
@@ -11,16 +12,17 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const geist = Geist({
+const geostar = Geostar({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-geostar-sans",
 });
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={geist.variable}>
+    <html lang="en" suppressHydrationWarning className={geostar.variable}>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
