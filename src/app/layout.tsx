@@ -4,8 +4,7 @@ import { type Metadata } from "next";
 import { Geostar } from "next/font/google";
 
 import { ThemeProvider } from "~/app/themecontext";
-import { Sidebar, SidebarProvider, SidebarTrigger} from "~/components/ui/sidebar";
-import { AppSidebar } from "~/components/ui/app-sidebar"
+
 
 export const metadata: Metadata = {
   title: "Joe's wonderful web",
@@ -26,12 +25,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={geostar.variable}>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
-        <SidebarProvider>
-      <AppSidebar/>
-      <main>
-        <SidebarTrigger />
-      </main>
-    </SidebarProvider>
       </body>
     </html>
   );

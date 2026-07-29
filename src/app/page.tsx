@@ -17,14 +17,11 @@ import { Label } from "~/components/ui/label";
 
 export default function HomePage() {
   return (
-    <div>
-      <Card className="w-full h-full justify-content items-center">
+    <div className="flex items-center justify-content">
+      <Card className="min-h-full min-w-full">
         <CardHeader>
           <CardTitle>Joe's wonderful web</CardTitle>
         </CardHeader>
-      </Card>
-      <Card className="w-full h-full justify-content items-center">
-        hello
       </Card>
     </div>
   );
