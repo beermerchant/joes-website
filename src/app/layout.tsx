@@ -2,9 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Geostar } from "next/font/google";
-
-import { ThemeProvider } from "~/app/themecontext";
-
+import { ThemeProvider } from "~/components/ui/theme-provider"
 
 export const metadata: Metadata = {
   title: "Joe's wonderful web",
@@ -23,9 +21,17 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning className={geostar.variable}>
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <head />
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
     </html>
   );
 }
