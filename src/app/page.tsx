@@ -1,26 +1,20 @@
 "use client";
 
-import { Button } from "~/components/ui/button";
+import TextChange from "./text"
 import {
   Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import { Input } from "~/components/ui/input";
-import { Label } from "~/components/ui/label";
-
 
 
 export default function HomePage() {
   return (
-    <div className="flex items-center justify-content">
-      <Card className="min-h-full min-w-full">
+    <div className="flex flex-col items-center justify-center h-screen w-screen">
+      <Card className="flex h-1/3 w-1/3 justify-content items-center justify-center">
         <CardHeader>
           <CardTitle>Joe's wonderful web</CardTitle>
+          <TextChange />
         </CardHeader>
       </Card>
     </div>
