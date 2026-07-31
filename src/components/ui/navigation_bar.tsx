@@ -9,18 +9,17 @@ export default function NavigationBar() {
         <div>
             <Card className="flex flex-row justify-start h-min-12rem w-screen p-5 rounded-none">
                 <a
-                    href="/home"
+                    href="/ai_usage"
                     className={buttonVariants({ variant: "default" })}
                 >
-                    ai_notice
+                    ai usage
                 </a>
                 <a
-                    href="/ai_usage"
+                    href="/home"
                     className={buttonVariants({ variant: "default" })}
                 >
                     home
                 </a>
-                <Button>fun stuff</Button>
                 <div className="flex flex-row justify-end w-full">
                     <ModeToggle />
                 </div>

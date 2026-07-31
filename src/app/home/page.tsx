@@ -1,9 +1,9 @@
 "use client";
+import { Card } from "~/components/ui/card";
+import Fade_in from "~/components/ui/fade_in";
 
 export default function Home() {
     return (
-        <div>
-        <p>hello</p>
-        </div>
+        <Fade_in><Card><p>hello</p></Card></Fade_in>
     )
 }

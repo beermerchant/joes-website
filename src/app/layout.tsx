@@ -3,11 +3,10 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Geostar } from "next/font/google";
-import { ThemeProvider } from "~/components/ui/theme-provider"
-import { ModeToggle } from "~/components/ui/theme-toggle";
-import { Button, buttonVariants } from "~/components/ui/button";
+import { ThemeProvider } from "~/components/ui/theme-provider";
 import { Card } from "~/components/ui/card";
 import NavigationBar from "~/components/ui/navigation_bar";
+
 
 
 export const metadata: Metadata = {
@@ -37,7 +36,7 @@ export default function RootLayout({
         >
           <NavigationBar />
         <div className="flex flex-col items-center justify-center gap-10 p-10 h-screen">
-        <Card className="flex items-center justify-center w-9/10 h-9/10">
+        <Card className="flex items-center justify-center w-full h-full">
           {children}
         </Card>
         </div>
