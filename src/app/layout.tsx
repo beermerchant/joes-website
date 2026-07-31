@@ -1,9 +1,13 @@
+
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Geostar } from "next/font/google";
 import { ThemeProvider } from "~/components/ui/theme-provider"
 import { ModeToggle } from "~/components/ui/theme-toggle";
+import { Button, buttonVariants } from "~/components/ui/button";
+import { Card } from "~/components/ui/card";
+
 
 export const metadata: Metadata = {
   title: "Joe's wonderful web",
@@ -23,19 +27,29 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={geostar.variable}>
       <head />
-        <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-          <div className="fixed top-4 right-4 z-50">
-            <ModeToggle></ModeToggle>
-          </div>
-            {children}
-         </ThemeProvider>
-        </body>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Card className="flex flex-row justify-end h-min-12rem w-screen p-5">
+              <a
+                href="/home"
+                className={buttonVariants({ variant: "default" })}
+              >
+                Home
+              </a>
+              <Button>about</Button>
+              <Button>fun stuff</Button>
+            <div>
+              <ModeToggle />
+            </div>
+          </Card>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

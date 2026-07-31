@@ -23,7 +23,6 @@ export default function HomePage() {
           <CardTitle>Joe's wonderful web</CardTitle>
         </CardHeader>
       <CardContent>
-        <Button onClick={() => router.push("home")}>Click me</Button>
       </CardContent>
       </Card>
     </div>
