@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Geostar } from "next/font/google";
 import { ThemeProvider } from "~/components/ui/theme-provider"
+import { ModeToggle } from "~/components/ui/theme-toggle";
 
 export const metadata: Metadata = {
   title: "Joe's wonderful web",
@@ -29,8 +30,11 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+          <div className="fixed top-4 right-4 z-50">
+            <ModeToggle></ModeToggle>
+          </div>
             {children}
-          </ThemeProvider>
+         </ThemeProvider>
         </body>
     </html>
   );
